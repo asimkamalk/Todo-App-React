@@ -5,11 +5,11 @@ export default function TodoList() {
   let [newTodo, setNewTodo] = useState("");
 
   let addNewTask = () => {
-    console.log("Adding new task");
+    setTodos([...todos, newTodo]);
   };
 
   let UpdateTodoValue = (event) => {
-    console.log(event.target.value);
+    setNewTodo(event.target.value);
   };
 
   return (
@@ -18,6 +18,7 @@ export default function TodoList() {
         <h2>Todo App</h2>
         <input
           type="text"
+          value={newTodo}
           placeholder="Add a task"
           onChange={UpdateTodoValue}
         />
