@@ -8,11 +8,19 @@ export default function TodoList() {
     console.log("Adding new task");
   };
 
+  let UpdateTodoValue = (event) => {
+    console.log(event.target.value);
+  };
+
   return (
     <>
       <div>
         <h2>Todo App</h2>
-        <input type="text" placeholder="Add a task" value={newTodo} />
+        <input
+          type="text"
+          placeholder="Add a task"
+          onChange={UpdateTodoValue}
+        />
         <br />
         <br />
         <button onClick={addNewTask}>Add Tak</button>
