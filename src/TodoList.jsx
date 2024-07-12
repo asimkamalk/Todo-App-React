@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 export default function TodoList() {
   let [todos, setTodos] = useState(["sample task"]);
+  let [newTodo, setNewTodo] = useState("");
   return (
     <>
       <div>
         <h2>Todo App</h2>
-        <input type="text" placeholder="Add a task" />
+        <input type="text" placeholder="Add a task" value={newTodo} />
         <br />
         <br />
         <button>Add Tak</button>
